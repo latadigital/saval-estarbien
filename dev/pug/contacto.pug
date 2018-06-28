@@ -1,0 +1,37 @@
+extends layouts/default.pug
+
+block vars
+    - var pageTitle = 'Contacto'
+
+block content
+    .c-breadcrumb
+        .c-inner
+            ul
+                li
+                    a(href="#") Home /
+                li
+                    a(href="#") Contacto
+    .c-contacto
+        .c-inner
+            .c-contacto__box
+                img(src="img/contacto-thumb.png")
+            .c-contacto__box.c-contacto__box--pad40
+                h1.c-info__h1.c-info__h1--inline-block.u-mb30
+                    span Comunícate con nosotros
+                .c-contacto__form
+                    form(action="#")
+                        .input.name
+                            input(type="text" placeholder="Nombre")
+                        .input.lastname
+                            input(type="text" placeholder="Apellido")
+                        .input.email
+                            input(type="text" placeholder="Email")
+                        .input.phone
+                            input(type="text" placeholder="Teléfono")
+                        .input.asunto.large
+                            input(type="text" placeholder="Asunto")
+                        .input.textarea.large
+                            textarea(name="message" placeholder="Escribe tu mensaje")
+                        .input.submit
+                            input(type="submit" value="Enviar")
+block append scripts

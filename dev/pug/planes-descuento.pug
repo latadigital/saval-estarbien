@@ -1,0 +1,102 @@
+extends layouts/default.pug
+
+block vars
+    - var pageTitle = 'Programa de descuentos'
+
+block content
+    .c-breadcrumb
+        .c-inner
+            ul
+                li
+                    a(href="#") Home /
+                li
+                    a(href="#") Planes de descuentos
+    .c-planesAbout
+        .c-planesAbout__icon
+            img(src="img/home-about-icon.svg")
+        .c-planesAbout__info
+            .c-planesAbout__image
+                img(src="img/planes-descuentos-info.png")
+            .c-planesAbout__description
+                h1.c-info__h1.u-mb30.c-info__h1--font20
+                    span Programa de Descuentos en medicamentos SAVAL
+                p.c-info__parrafo Este programa creado y pensado para ti por Labratorios SAVAL tiene como objetivo facilitar el acceso a medicamentos de alta calidad a través de descuentos.
+                p.c-info__parrafo Este programa facilita el cumplimiento de la terapia en los pacientes a través de descuentos en dinero que se harán efectivos al momento de realizar la compra de un medicamento que se encuentre adherido a este programa.
+    .c-beneficios
+        .c-inner
+            .c-beneficios__title
+                h2 ¿Por qué 
+                    strong adherirme 
+                    | al Programa?
+                p A través de estos descuentos tendrás acceso a medicamentos de alta tecnología y certificados según normas internacionales.
+            .c-beneficios__lista
+                ul
+                    li Nuestros descuentos van dirigidos a las 
+                        strong patologías más comunes.
+                    li Más de 
+                        strong 90 medicamentos con descuentos.
+                    li Abarcamos enfermedades 
+                        strong crónicas y agudas.
+                    li Medicamentos de alta tecnología y 
+                        strong certificados según normas internacionales.
+    .c-comoAcceder
+        .c-inner
+            h1 ¿Cómo 
+                strong Acceder al Programa?
+            p Si no posees el cupón de descuento entregado por tu médico, descárgalo desde aquí siguiendo estos 3 simples pasos:
+
+            .c-comoAcceder__items
+                .c-comoAcceder__item
+                    .icon
+                        img(src="img/planes-icon-1.png")
+                    p Ingresa en las áreas de búsqueda el medicamento,  o presentación recetado por tu médico.
+                .c-comoAcceder__item
+                    .icon
+                        img(src="img/planes-icon-2.png")
+                    p Ingresa en las áreas de búsqueda el medicamento,  o presentación recetado por tu médico.
+                .c-comoAcceder__item
+                    .icon
+                        img(src="img/planes-icon-3.png")
+                    p Ingresa en las áreas de búsqueda el medicamento,  o presentación recetado por tu médico.                                        
+    .c-buscadorMedicamentos
+        h1 Utilice este buscador para ver qué 
+            strong medicamentos están asociados al Programa de Descuento
+        .c-buscadorMedicamentos__form
+            form(action="#")
+                .select.brand
+                    label(for="#") Seleccione marca
+                    select(name="")
+                        option(value="#") Marca
+                .select.brand
+                    label(for="#") Seleccione presentación
+                    select(name="")
+                        option(value="#") Marca
+                .input.submit
+                    button Buscar
+        p Si no posees el cupón de descuento entregado por tu médico, descárgalo desde aquí siguiendo estos 3 simples pasos.
+    .c-buscadorResultados
+        .c-inner
+            h1 Resultados
+            .c-buscadorResultados__items
+                each item in [1,2,3,4]
+                    .c-buscadorResultados__item
+                        p Cefirax ® Cefpodoxima - 10 Comprimidos recubiertos
+                        .actions
+                            span $-3.000
+                            a(href="#") Obtener
+    .c-asociados
+        .c-inner
+            h1 Farmacias adheridas al 
+                strong Programa de Descuentos SAVAL
+            .c-asociados__logos
+                .c-asociados__logo
+                    img(src="img/brands-salcobrand.png")
+                .c-asociados__logo
+                    img(src="img/brands-ahumada.png")
+                .c-asociados__logo
+                    img(src="img/brands-cruzverde.png")
+                .c-asociados__logo
+                    img(src="img/brands-carmen.png")
+                .c-asociados__logo
+                    img(src="img/brands-redfarma.png")                                                                                
+block append scripts

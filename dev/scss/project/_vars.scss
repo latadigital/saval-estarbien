@@ -1,0 +1,35 @@
+// Colors
+$white:#FFF;
+$black:#000;
+
+$color_brand:#0074c8;
+$color_brand2:#f39100;
+$color_text:#000;;
+$color_bg:'';
+$lightGrey: #f5f6f7;
+
+// fonts
+$base_size:14px;
+$font_base:'Asap', sans-serif;
+$font_highlight:'Asap', sans-serif;
+
+// Common
+$transition-duration: .3s !default;
+
+// Margins & Paddings
+$numbers: 0, 10, 20, 30, 40, 50, 60, 70, 80, 90;
+$sides: t top,r right,b bottom,l left;
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */

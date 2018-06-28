@@ -1,0 +1,19 @@
+extends layouts/default.pug
+
+block vars
+    - var pageTitle = 'Blog'
+
+block content
+    .c-faq
+        .c-inner
+            .c-faq__items
+                each item in [1,2,3,4]
+                    .c-faq__item
+                        .c-faq__title
+                            h2 ¿Qué es el Programa de Descuento en medicamentos SAVAL?
+                            a(href="#")
+                                span.fas.fa-plus
+                        .c-faq__info
+                            .inner
+                                p Se encuentra activo a nivel nacional, en toda la red de farmacias adheridas al programa de descuento Saval a lo largo del país. Para mayor detalle revisa el siguiente link
+block append scripts

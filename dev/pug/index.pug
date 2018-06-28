@@ -1,0 +1,126 @@
+extends layouts/default.pug
+
+block vars
+	- var pageTitle = 'home'
+
+block content
+	.c-bigbanner
+		.c-bigbanner__slides
+			.c-bigbanner__slide
+				.c-bigbanner__image
+					img(src="img/home-bigbanner.jpg", alt="")
+				.c-bigbanner__info
+					hgroup
+						h2
+							span Nuevo 
+							| programa de
+						h1 Descuentos					
+					span  
+						i en 
+						| medicamentos
+	.c-homeAbout
+		.c-homeAbout__icon
+			img(src="img/home-about-icon.svg")
+		.c-homeAbout__info
+			.c-homeAbout__image
+				img(src="img/home-about-image.jpg")
+			.c-homeAbout__description
+				h1.c-info__h1.u-mb30.c-info__h1--font20
+					span Programa de descuentos en medicamentos
+				p.c-info__parrafo Porque para nosotros tu salud es lo más importante, creamos un exclusivo programa de descuentos para cuidarte a ti y a quienes más quieres. Con él, podrás acceder a medicamentos de alta calidad a precios preferentes
+				.c-info__link.c-info__link--mobileInline
+					span + 
+					| busca tu medicamento con descuento
+	.c-savalInfo
+		.c-savalInfo__boxes
+			.c-savalInfo__box.c-savalInfo__box--darkBlue.c-savalInfo__box--patterBg
+				h2 Pensado para ti 
+					br
+					| por 
+					strong Laboratorios Saval
+				p Laboratorios SAVAL es el único laboratorio chileno que lleva más de 80 años entregando medicamentos de alta calidad en Chile con presencia en 10 países latinoamericanos.
+				.c-info__link.c-info__link--marLeft30
+					span + 
+					| Quiero saber más
+
+			.c-savalInfo__box.c-savalInfo__box--middleBlue
+				h3 La 
+					strong Calidad 
+					| Que mereces	
+				ul
+					each item in ['Certificación GMP', 'Altas estándares de calidad', 'Tecnología de Vanguardia', 'Buenas prácticas de manofactura', 'Certificaciones según normas internacionales']
+						li
+							span
+								img(src="img/home-about-icon.svg", alt="")
+							| #{item}
+
+			.c-savalInfo__box.c-savalInfo__box--lightBlue.c-savalInfo__box--iconBg
+				h3 Nuestra 
+					strong Planta de Producción 
+					| Farmacéutica
+
+				.gallery
+					each item in [1,2,3,4,5,6]
+						figure
+							img(src="img/gallery-item.jpg")
+	.c-savaTemas
+		.c-inner
+			h1.c-info__h1.c-info__h1--inline-block.u-mb30
+				span Temas de interés
+			p.c-savaTemas__bajada.u-mb90
+				strong ¿Quieres conocer los tips y consejos para cuidar a tu familia?
+				| Entonces no dejes de leer, porque
+				br
+				| encontrarás aquí lo que necesitas saber para tu bienestar y el de quienes más quieres.
+
+			.c-savaTemas__boxes
+				each item in ['img/iconos/icon-vision.svg', 'img/iconos/icon-dolor.svg', 'img/iconos/icon-mental.svg', 'img/iconos/icon-infantil.svg', 'img/iconos/icon-corazon.svg', 'img/iconos/icon-gastrico.svg', 'img/iconos/icon-respiratorio.svg', 'img/iconos/icon-nutricion.svg', 'img/iconos/icon-nutricion.svg']
+					.c-savaTemas__box
+						.icon
+						figure
+							img(src=item)
+						span Visión
+						p You may disguises your features but to you can never disguise your intent the trouble with regeneration. You quite never know what you're going to get. You
+						a(href="#")
+							span +
+							| Ver todos los articulos
+	.c-newsletter
+		.c-inner
+			.c-newsletter__info
+				h1 ¡Suscríbete a nuestros Temas de Interés!
+				p Suscribete y recibirás artículos relevantes y de tu interés
+			.c-newsletter__form
+				form(action="#")
+					.icon
+						i.icon-Correo
+					.input.email
+						input(type="text" placeholder="Email")
+					.input.submit
+						input(type="submit" value="Enviar")
+			.clearfix
+	.c-homeBlog
+		.c-inner
+			h1.c-info__h1.u-mb40
+				span Articulos destacados
+			.c-homeBlog__articles
+				each item in [1,2,3]
+					.c-homeBlog__article
+						.c-homeBlog__article-inner
+							.c-homeBlog__article-image
+								img(src="img/blog-thumb.png")
+							.c-homeBlog__article-info
+								h2 ¿Qué es la diabetes?
+								span Marzo 16, 2016 por Camila en temas de salud
+								p Voluptatem accusantium dolormque laudantium sa tota rem aperiam, eaque ipsa quae [...]
+								a(href="#") Continuar leyendo
+
+								.c-homeBlog__article-socials
+									a(href="#")
+										span.fab.fa-facebook-f
+									a(href="#")
+										span.fab.fa-twitter
+									a(href="#")
+										span.fab.fa-instagram
+
+block append scripts
+
