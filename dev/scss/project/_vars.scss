@@ -3,7 +3,7 @@ $white:#FFF;
 $black:#000;
 
 $color_brand:#0074c8;
-$color_brand2:#f39100;
+$color_brand2:#fd8204;
 $color_text:#000;;
 $color_bg:'';
 $lightGrey: #f5f6f7;
@@ -33,3 +33,5 @@ $sides: t top,r right,b bottom,l left;
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
 /* close commented backslash hack */
+
+#wrapper {max-width: 1920px; margin: 0px auto;}

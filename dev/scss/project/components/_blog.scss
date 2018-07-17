@@ -1,11 +1,18 @@
 @include component('breadcrumb') {
     background: #f8f8f8;
     text-align: right;
+    padding: 0px 20px;
+    @include modifier('m70') {
+        margin-bottom: 70px;
+    }
 
     ul {
         li {
             display: inline-block;
             line-height: 46px;
+            a {
+                color: #777777;
+            }
         }
     }
 }
@@ -53,7 +60,7 @@
 
         ul {
             display: flex;
-            padding: 30px 0px;
+            padding: 20px 0px;
             @media(max-width: 992px) {
                 min-width: 900px;
             }
@@ -103,14 +110,29 @@
     }
 
     @include element('orangeTitle') {
-        font-size: 25px;
-        color: #fff;
-        background: $color_brand2;
-        line-height: 45px;
-        display: inline-block;
-        padding: 0px 36px 0px 45px;
-        border-right: 9px solid $color_brand;     
-        margin-bottom: 33px;    
+        padding-bottom: 33px;
+        margin-bottom: 33px;
+        position: relative;
+
+        strong {
+            font-size: 25px;
+            color: #fff;
+            background: $color_brand2;
+            line-height: 45px;
+            display: inline-block;
+            padding: 0px 36px 0px 45px;
+            border-right: 9px solid $color_brand;        
+        }   
+
+        &:after {
+            height: 1px;
+            background: #6db9da;
+            content: '';
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+        }
     }
 
     @include element('content') {
@@ -123,6 +145,7 @@
             font-weight: 300;
             max-width: 640px;
             margin: 0px auto 50px;
+            line-height: 24px;
         }
     }
 
@@ -159,7 +182,8 @@
 
     @include element('article-info') {
         background: #fff;
-        padding: 28px 20px 10px;
+        padding: 28px 20px 30px;
+        text-align: left;
 
         h2 {
             font-size: 23px;
@@ -186,14 +210,31 @@
             text-align: left;
         }
         
-        a {
+        > a {
             font-weight: 700;
-            color: #888888;
+            color: #333333;
             text-transform: uppercase;
             font-size: 11px;
             margin-bottom: 15px;
-            display: block;
-            text-align: left;
+            display: inline-block;
+            position: relative;
+
+            &:after {
+                background: url('../img/icono-blog-flecha.png');
+                content: '';
+                position: absolute;
+                right: -30px;
+                top: 9px;
+                height: 11px;
+                width: 15px;
+            }
+
+            span {
+                display: inline-block;
+                color: #333333;
+                font-size: 20px;
+                margin-right: 10px;
+            }
         }
     }
 

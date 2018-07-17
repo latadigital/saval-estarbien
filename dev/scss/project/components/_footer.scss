@@ -1,10 +1,14 @@
 @include component('footer') {
     background: #044b81;
     padding: 100px 0px 54px;
+    overflow: hidden;
+    position: relative;
 
     @include element('boxes') {
         height: 1%;
         overflow: hidden;
+        position: relative;
+        z-index: 999;
     }
 
     @include element('box') {
@@ -24,7 +28,7 @@
             margin-bottom: 15px;
 
             img {
-                max-width: 120px;
+                max-width: 140px;
             }
         }
 
@@ -37,7 +41,8 @@
             position: relative;
             @media(max-width: 992px) {
                 text-align: left;
-            }                        
+            }                       
+
             &:after{
                 height: 2px;
                 content: '';
@@ -85,7 +90,7 @@
             line-height: 24px;
             @media(max-width: 992px) {
                 text-align: center;
-                margin: 0px auto;
+                margin: 0px auto 20px;
                 width: 80%;
             }                        
         }
@@ -131,11 +136,33 @@
             }
         }
     }
+
+    &:after {
+        background: url('../img/Footer-1.png');
+        height: 380px;
+        content: '';
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        opacity: 1;
+        width: 460px;
+    }
+
+    &:before {
+        background: url('../img/Footer-2.png');
+        height: 368px;
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 1;
+        width: 552px;
+    }    
 }
 
 @include component('copyright') {
     background: #024476;
-    padding: 13px 0px;
+    padding: 13px 20px;
 
     @include element('link') {
         position: absolute;
@@ -144,6 +171,16 @@
         transform: translate(-50%, -50%);
         color: #fff;
         font-size: 11px;
+        @media(max-width:700px) {
+            position: initial;
+            display: block;
+            left: initial;
+            top: initial;
+            transform: initial;
+            text-align: center;
+            margin-bottom: 10px;
+            width: 100%;
+        }        
     }
 
     p {
@@ -151,10 +188,22 @@
         color: #b6b6b6;
         font-size: 11px;
         margin-bottom: 0px;
+        @media(max-width:700px) {
+            text-align: center;
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+        }
     }
 
     ul {
         float: right;
+        @media(max-width:700px) {
+            display: block;
+            float: none;
+            text-align: center;
+            width: 100%;
+        }
 
         li {
             display: inline-block;
@@ -191,13 +240,14 @@
 @include component('footerLocation') {
     position: relative;
     bottom: -50px;
+    z-index: 99;
     @media(max-width: 992px) {
         bottom: 0px;
     }
     
     @include element('inner') {
         margin: 0px auto;
-        max-width: 1300px;
+        max-width: 860px;
         width: 100%;
     }
 
@@ -212,7 +262,7 @@
         padding-left: 95px;
         padding-top: 25px;
         padding-bottom: 25px;
-        width: 33.3%;
+        width: 50%;
         @media(max-width: 992px) {
             width: 100%;
         }
@@ -242,6 +292,7 @@
 
         @include modifier('darkOrange') {
             background: #d07d03;
+            padding-bottom: 45px;
         }
     }
 
@@ -266,11 +317,11 @@
         }
 
         @include modifier('mediumOrange') {
-            background: #c07404;
+            background: #de8603;
         }
 
         @include modifier('darkOrange') {
-            background: #9d5f05;
+            background: #c07404;
         }        
     }
 }

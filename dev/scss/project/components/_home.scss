@@ -54,8 +54,9 @@
     @include element('parrafo') {
         font-size: 14px;
         color: #000;
-        line-height: 26px;
+        line-height: 24px;
         margin-bottom: 30px;
+        font-family: 'Raleway', sans-serif;
     }
 
     @include element('link') {
@@ -146,7 +147,7 @@
     }
 
     @include element('image') {
-        background: rgba(255, 255, 255, 0.6);
+        background: rgba(255, 255, 255, 0.2);
         padding: 9px;
         margin-right: 5.1%;
         float: left;
@@ -185,6 +186,7 @@
             }               
 
             span {
+                font-size: 20px !important;
                 @media(max-width: 992px) {
                     font-size: 16px !important;
                     padding: 10px 0px;
@@ -192,7 +194,18 @@
                 }                   
             }
         }       
-    }     
+    } 
+    
+    &:after {
+        background: url('../img/Patter-1.png');
+        height: 712px;
+        content: '';
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        opacity: 0.2;
+        width: 1125px;
+    }
 }
 
 @include component('savalInfo') {
@@ -210,9 +223,25 @@
         padding: 90px 50px 85px;
         height: 485px;
         width: 33.3%;
+        position: relative;
         @media(max-width: 1200px) {
-            height: 550px;
+            height: 450px;
         }
+
+        &:nth-of-type(1) {
+            &:before {
+                position: absolute;
+                height: 60px;
+                width: 60px; 
+                content: '';
+                top: 70px;
+                right: -30px;
+                background: url('../img/home-savalinfo-icon.png');
+                background-size:60px 60px;
+                z-index: 999;
+            }
+        }
+
 
         h2 {
             font-size: 35px;
@@ -237,11 +266,15 @@
             font-weight: 300;
             color: #fff;
             line-height: 40px;
-            margin-bottom: 20px;
+            margin-bottom: 18px !important;
             @media(max-width: 1200px) {
                 font-size: 25px;
                 line-height: 34px;
-            }                         
+            }     
+            
+            small {
+                font-size: 15px;
+            }
 
             strong {
                 font-weight: 700;
@@ -256,11 +289,20 @@
                 span {
                     display: inline-block;
                     margin-right: 20px;
+                    vertical-align: middle;
                     width: 22.3px;
 
                     img {
                         width: 100%;
                     }
+                }
+
+                i {
+                    font-style: initial;
+                    display: inline-block;
+                    font-family: 'Raleway', sans-serif;
+                    vertical-align: middle;
+                    width: 75.7%;
                 }
 
                 &:nth-of-type(even) {
@@ -280,6 +322,7 @@
             line-height: 24px;
             color: #fff;
             padding-left: 30px;
+            font-family: 'Raleway', sans-serif;
             margin-bottom: 28px;
         }
 
@@ -308,17 +351,17 @@
 
         @include modifier('lightBlue') {
             background: #0682e0;
-            padding: 62px 110px 49px;
+            padding: 90px 110px 49px;
             @media(max-width: 1700px) {
-                padding: 62px 80px 49px;
+                padding: 90px 80px 49px;
             }
 
             @media(max-width: 1500px) {
-                padding: 62px 50px 49px;
+                padding: 90px 50px 49px;
             }           
             
             @media(max-width: 1300px) {
-                padding: 62px 20px 49px;
+                padding: 90px 20px 49px;
             }                       
 
             h3 {
@@ -332,14 +375,14 @@
             position: relative;
 
             &:after {
-                background: url('../img/paraticle-pattern.svg');
-                opacity: 0.1;
+                background: url('../img/Patter-2-Cuadro-azul.png');
+                opacity: 0.6;
                 content: '';
                 position: absolute;
                 bottom: 0px;
                 right: 0px;
-                height: 350px;
-                width: 350px;
+                height: 241px;
+                width: 322px;
             }
         }   
         
@@ -364,11 +407,18 @@
 @include component('savaTemas') {
     padding: 55px 0px;
     text-align: center;
+
+    @media(max-height: 1300px) {
+        padding: 60px 30px;
+    }    
+
     @media(max-width: 992px) {
         padding: 20px 0px;
     }
 
     h1 {
+        margin-bottom: 40px;
+
         @media(max-width: 600px) {
             width: 90%;
         }        
@@ -384,10 +434,13 @@
     }
 
     @include element('bajada') {
-        color: #777777;
+        color: #333333;
         position: relative;
         top: -10px;
         line-height: 22px;
+        font-family: 'Raleway', sans-serif;
+        max-width: 620px;
+        margin: 0px auto 60px;
         @media(max-width: 992px) {
             margin: 0px auto 50px;
             top: -5px;
@@ -414,7 +467,7 @@
         text-align: left;
         border-left: 1px solid #d2d2d2;
         padding: 20px 50px 40px;
-        height: 245px;
+        height: 345px;
         position: relative;
         @media(max-width: 1050px) {
             width: 50%;
@@ -463,6 +516,7 @@
             display: block;
             color: #666666;
             line-height: 20px;
+            font-family: 'Raleway', sans-serif;
             margin-bottom: 30px;
             font-size: 13px;
             font-weight: 300;
@@ -505,6 +559,10 @@
     }
 
     h1 {
+        @media(max-width: 1300px) {
+            margin-left: 20px;
+        }
+        
         @media(max-width: 600px) {
             text-align: center;
             display: inline-block;
@@ -512,6 +570,8 @@
         }        
 
         span {
+            font-size: 25px;
+
             @media(max-width: 600px) {
                 font-size: 16px;   
                 line-height: 22px;
@@ -529,7 +589,7 @@
 
     @include element('article') {
         float: left;
-        padding: 0px 20px;
+        padding: 0px 12px;
         width: 33.3%;
         @media(max-width: 700px) {
             margin-bottom: 40px;
@@ -549,7 +609,7 @@
 
     @include element('article-info') {
         background: #fff;
-        padding: 28px 20px 10px;
+        padding: 28px 20px 30px;
 
         h2 {
             font-size: 18px;
@@ -573,26 +633,50 @@
             line-height: 24px;
         }
         
-        a {
+        > a {
             font-weight: 700;
-            color: #888888;
+            color: #333333;
             text-transform: uppercase;
             font-size: 11px;
             margin-bottom: 15px;
-            display: block;
+            display: inline-block;
+            position: relative;
+
+            &:after {
+                background: url('../img/icono-blog-flecha.png');
+                content: '';
+                position: absolute;
+                right: -30px;
+                top: 9px;
+                height: 11px;
+                width: 15px;
+            }
+
+            span {
+                display: inline-block;
+                color: #333333;
+                font-size: 20px;
+                margin-right: 10px;
+            }
         }
     }
 
     @include element('article-socials') {
         a {
             display: inline-block;
-            padding: 10px;
+            height: 30px;
+            text-align: center;
+            margin-right: 10px;
+            border-radius: 50%;
+            width: 30px;
+            line-height: 32px;
+            background: #333333;
 
             span {
                 display: inline-block;
                 transition: color $transition_duration;
                 font-size: 14px;
-                color: #444444;
+                color: #fff;
             }
 
             &:hover {
