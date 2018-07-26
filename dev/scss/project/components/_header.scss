@@ -87,6 +87,7 @@
 		height: 1%;
 		overflow: hidden;
 		padding-left: 15%;	
+		padding-right: 20px;
 		width: 100%;	
 	}
 
@@ -196,7 +197,7 @@
 		background: $color_brand;
 		border-bottom: 9px solid $color_brand2;
 		padding-left: 30%;
-		@media(max-width: 1200px) {
+		@media(max-width: 1300px) {
 			padding-left: 20%;
 		}
 

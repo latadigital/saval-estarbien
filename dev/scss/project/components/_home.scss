@@ -446,6 +446,11 @@
             top: -5px;
             width: 70%;
         }
+
+        strong {
+            font-weight: 700px;
+            display: block;
+        }
     }
 
     @include element('boxes') {
@@ -528,6 +533,9 @@
         }
 
         a {
+            position: absolute;
+            bottom: 40px;
+            left: 50px;
             @media(max-width: 600px) {
                 display: none;
             }            

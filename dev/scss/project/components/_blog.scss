@@ -54,15 +54,19 @@
 
     @include element('filtros') {
         background: $color_brand;
-        @media(max-width: 992px) {
+        @media(max-width: 1300px) {
             overflow-y:scroll;
+        }       
+        
+        &::-webkit-scrollbar { 
+            display: none; 
         }        
 
         ul {
             display: flex;
             padding: 20px 0px;
-            @media(max-width: 992px) {
-                min-width: 900px;
+            @media(max-width: 1300px) {
+                min-width: 1300px;
             }
 
             li {
@@ -103,6 +107,11 @@
                         @media(max-width: 992px) {
                             display: none;
                         }                        
+                    }
+
+                    &:hover {
+                        text-decoration: none;
+                        color: $color_brand2;
                     }
                 }
             }
