@@ -162,6 +162,12 @@
         height: 1%;
         overflow: hidden;
         padding-bottom: 40px;
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;            
+        }
     }
 
     @include element('article') {
@@ -289,4 +295,8 @@
             text-decoration: none;
         }
     }
+}
+
+.grid-sizer {
+    width: 25%;
 }
