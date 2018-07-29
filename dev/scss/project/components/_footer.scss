@@ -1,0 +1,327 @@
+@include component('footer') {
+    background: #044b81;
+    padding: 100px 0px 54px;
+    overflow: hidden;
+    position: relative;
+
+    @include element('boxes') {
+        height: 1%;
+        overflow: hidden;
+        position: relative;
+        z-index: 999;
+    }
+
+    @include element('box') {
+        float: left;
+        height: 1%;
+        overflow: hidden;
+        padding: 0px 20px;
+        width: 33.3%;
+        @media(max-width: 992px) {
+            text-align: center;
+            margin-bottom: 20px;
+            width: 100%;
+        }        
+
+        figure {
+            margin: 0px;
+            margin-bottom: 15px;
+
+            img {
+                max-width: 140px;
+            }
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 300;
+            padding-bottom: 10px;
+            color: #fff;
+            margin-bottom: 23px;
+            position: relative;
+            @media(max-width: 992px) {
+                text-align: left;
+            }                       
+
+            &:after{
+                height: 2px;
+                content: '';
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                background: #19a4c6;
+                width: 20px;
+            }
+        }
+
+        ul {
+            float: left;
+            width: 50%;
+            @media(max-width: 992px) {
+                text-align: left;
+                width: 100%;
+            }            
+
+            li {
+                margin-bottom: 20px;
+                padding-left: 16px;
+                position: relative;
+
+                a {
+                    color: #fff;
+                }
+
+                &:after {
+                    background: url('../img/footer-li-icon.png');
+                    content: '';
+                    height: 9px;
+                    position: absolute;
+                    top: 50%;
+                    left: 0px;
+                    transform: translateY(-50%);
+                    width: 5px;
+                }
+            }
+        }
+
+        p {
+            font-size: 14px;
+            color: #fff;
+            line-height: 24px;
+            @media(max-width: 992px) {
+                text-align: center;
+                margin: 0px auto 20px;
+                width: 80%;
+            }                        
+        }
+
+        form {
+            height: 1%;
+            overflow: hidden;
+            .input {
+                float: left;
+                width: 73%;
+
+                input {
+                    height: 48px;
+                    border: 1px solid #386384;
+                    background: #02528f;
+                    padding: 0px 20px;
+                    color: #fff;
+                    outline: none;
+                    width: 100%;
+                }
+
+                &.email {
+                    margin-right: 2%;
+                }
+
+                &.submit {
+                    float: left;
+                    width: 25%;
+
+                    input {
+                        border: 1px solid #1896f1;
+                        cursor: pointer;
+                        background: #1896f1;
+                        color: #fff;
+                        text-transform: uppercase;
+                        transition: background 250ms;
+
+                        &:hover {
+                            background: #1896f1 - 50;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &:after {
+        background: url('../img/Footer-1.png');
+        height: 380px;
+        content: '';
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        opacity: 1;
+        width: 460px;
+    }
+
+    &:before {
+        background: url('../img/Footer-2.png');
+        height: 368px;
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 1;
+        width: 552px;
+    }    
+}
+
+@include component('copyright') {
+    background: #024476;
+    padding: 13px 20px;
+
+    @include element('link') {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 11px;
+        @media(max-width:700px) {
+            position: initial;
+            display: block;
+            left: initial;
+            top: initial;
+            transform: initial;
+            text-align: center;
+            margin-bottom: 10px;
+            width: 100%;
+        }        
+    }
+
+    p {
+        float: left;
+        color: #b6b6b6;
+        font-size: 11px;
+        margin-bottom: 0px;
+        @media(max-width:700px) {
+            text-align: center;
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+    }
+
+    ul {
+        float: right;
+        @media(max-width:700px) {
+            display: block;
+            float: none;
+            text-align: center;
+            width: 100%;
+        }
+
+        li {
+            display: inline-block;
+            color: #fff;
+            a {
+                color: #b6b6b6;
+                font-size: 11px;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        span {
+            color: #fff;
+            display: inline-block;
+            padding: 0px 10px;
+        }
+    }
+}
+
+@include component('madeIn') {
+    text-align: center;
+    background: #003a66;
+    padding: 13px 0px;
+
+    a {
+        margin: 0px;
+        color: #888888;
+        font-size: 10px;
+    }
+}
+
+@include component('footerLocation') {
+    position: relative;
+    bottom: -50px;
+    z-index: 99;
+    @media(max-width: 992px) {
+        bottom: 0px;
+    }
+    
+    @include element('inner') {
+        margin: 0px auto;
+        max-width: 860px;
+        width: 100%;
+    }
+
+    @include element('boxes') {
+        height: 1%;
+        overflow: hidden;
+    }
+
+    @include element('box') {
+        float: left;
+        position: relative;
+        padding-left: 95px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        width: 50%;
+        @media(max-width: 992px) {
+            width: 100%;
+        }
+
+        h2 {
+            color: #fff;
+            margin-bottom: 5px;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: #fff;
+            margin-bottom: 0px;
+            font-size: 13px;
+            line-height: 20px;
+        }
+        
+        @include modifier('lightOrange') {
+            background: #fe9802;
+        }
+
+        @include modifier('mediumOrange') {
+            background: #de8603;
+        }
+
+        @include modifier('darkOrange') {
+            background: #d07d03;
+            padding-bottom: 45px;
+        }
+    }
+
+    @include element('icon') {
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 60px;
+        width: 55px;
+        text-align: center;
+        background: #de8603;
+        border-bottom: 2px solid #fff; 
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            width: 20px;
+        }
+
+        @include modifier('mediumOrange') {
+            background: #de8603;
+        }
+
+        @include modifier('darkOrange') {
+            background: #c07404;
+        }        
+    }
+}

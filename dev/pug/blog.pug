@@ -1,0 +1,100 @@
+extends layouts/default.pug
+
+block vars
+    - var pageTitle = 'Blog'
+
+block content
+    .c-breadcrumb
+        .c-inner
+            ul
+                li
+                    a(href="#") Home /
+                li
+                    a(href="#") Temas de Interés
+    .c-blog
+        .c-blog__title
+            h1 Temas de 
+                strong interés
+        .c-blog__filtros
+            .c-inner
+                ul
+                    li
+                        a(href="#")
+                            span
+                                img(src="img/iconos/icon-vision-white.svg", alt="")
+                            | Visión
+                    li
+                        a(href="#")
+                            span
+                                img(src="img/iconos/icon-mental-white.svg", alt="")
+                            | Mental
+                    li
+                        a(href="#")
+                            span
+                                img(src="img/iconos/icon-corazon-white.svg", alt="")
+                            | Corazón
+                    li
+                        a(href="#")
+                            span
+                                img(src="img/iconos/icon-respiratorio-white.svg", alt="")
+                            | Sistema Respiratorio
+                    li
+                        a(href="#")
+                            span
+                                img(src="img/iconos/icon-dolor-white.svg", alt="")
+                            | Dolor e Inflamación
+                    li
+                        a(href="#")
+                            span
+                                img(src="img/iconos/icon-infantil-white.svg", alt="")
+                            | Infantil
+                    li
+                        a(href="#")
+                            span
+                                img(src="img/iconos/icon-gastrico-white.svg", alt="")
+                            | Sistema Digestivo
+                    li
+                        a(href="#")
+                            span
+                                img(src="img/iconos/icon-nutricion-white.svg", alt="")
+                            | Nutrición
+                    li
+                        a(href="#")
+                            span
+                                img(src="img/iconos/icon-otros-white.svg", alt="")
+                            | Otros
+        .c-blog__content
+            .c-inner
+                h2.c-blog__orangeTitle
+                    strong Infantil
+                p Porque lo que les suceda a nuestros niños  puede afectarles en el futuro, es importante saber cómo cuidarlos, cuáles son las enfermedades más comunes que pueden afectarlos y qué hacer para que crezcan sanos y felices.
+
+                .c-blog__articles
+                    .grid-sizer
+                    each item in [1,2,3,4,5,6,7,8,9]
+                        .c-blog__article
+                            .c-blog__article-inner
+                                .c-blog__article-image
+                                    img(src="img/blog-thumb.png")
+                                .c-blog__article-info
+                                    h2 ¿Qué es la diabetes?
+                                    p Voluptatem accusantium dolormque laudantium sa tota rem aperiam, eaque ipsa quae [...]
+
+                                    a(href="#")
+                                        span + 
+                                        | Leer más
+
+                                    .c-blog__article-socials
+                                        a(href="#")
+                                            span.fas.fa-envelope
+                                        a(href="#")
+                                            span.fab.fa-facebook-f
+                                        a(href="#")
+                                            span.fab.fa-twitter
+                                        a(href="#")
+                                            span.fab.fa-google-plus-g
+                                        a(href="#")
+                                            span.fab.fa-linkedin-in   
+                a.c-blog__loadMore(href="#") ver todos los temas
+
+block append scripts

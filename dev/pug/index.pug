@@ -1,0 +1,205 @@
+extends layouts/default.pug
+
+block vars
+	- var pageTitle = 'home'
+
+block content
+	.c-bigbanner
+		.c-bigbanner__slides
+			.c-bigbanner__slide
+				.c-bigbanner__image
+					img(src="img/home-bigbanner.jpg", alt="")
+				.c-bigbanner__info
+					hgroup
+						h2
+							span Nuevo 
+							| programa de
+						h1 Descuentos					
+					span  
+						i en 
+						| medicamentos
+	.c-homeAbout
+		.c-homeAbout__icon
+			img(src="img/home-about-icon.svg")
+		.c-homeAbout__info
+			.c-homeAbout__image
+				img(src="img/home-about-image.jpg")
+			.c-homeAbout__description
+				h1.c-info__h1.u-mb30
+					span Programa de descuentos en medicamentos
+				p.c-info__parrafo Para nosotros la salud de las personas es lo más importante, Por eso hemos creado un exclusivo programa de descuento en medicamentos de alta calidad para facilitar el cumplimiento de la terapia que su médico ha indicado.
+				.c-info__link.c-info__link--mobileInline
+					span + 
+					| Busca descuento
+	.c-savalInfo
+		.c-savalInfo__boxes
+			.c-savalInfo__box.c-savalInfo__box--darkBlue.c-savalInfo__box--patterBg
+				h2 Pensado para ti 
+					br
+					| por 
+					strong Laboratorios Saval
+				p Laboratorios SAVAL es una empresa chilena con más de 80 años de trayectoria, cuya calidad e innovación son ampliamente reconocidas por el cuerpo médico.
+				.c-info__link.c-info__link--marLeft30
+					span + 
+					| Leer más
+
+			.c-savalInfo__box.c-savalInfo__box--middleBlue
+				h3 
+					strong Medicamentos  
+					| de 
+					strong alta calidad 
+					| que brindan 
+					strong seguridad y eficacia
+				ul
+					each item in ['Certificación GMP. (Buenas Prácticas de Manufactura).', 'Altos estándares de calidad.', 'Tecnología de vanguardia.', 'Certificaciones según normas internacionales aceptadas y validadas por el cuerpo médico.']
+						li
+							span
+								img(src="img/home-about-icon.svg", alt="")
+							i #{item}
+
+			.c-savalInfo__box.c-savalInfo__box--lightBlue.c-savalInfo__box--iconBg
+				h3 Nuestra 
+					strong Planta de Producción 
+					| Farmacéutica
+					br
+					small Galeria de fotos
+				.gallery
+					each item in [1,2,3,4,5,6]
+						figure
+							img(src="img/gallery-item.jpg")
+	.c-savaTemas
+		.c-inner
+			h1.c-info__h1.c-info__h1--inline-block.u-mb30
+				span Temas de interés
+			p.c-savaTemas__bajada.u-mb90 En esta sección usted encontrará artículos relacionados con temas generales de salud, tanto para adultos como niños, que le ayudarán a profundizar sus conocimientos respecto de diversas enfermedades, recomendaciones para llevar una vida más saludable.
+				a(href="#")
+					strong Ingrese aquí.
+
+			.c-savaTemas__boxes
+				.c-savaTemas__box
+					.icon
+					figure
+						img(src='img/iconos/icon-infantil.svg ')
+					span Infantil
+					p Porque lo que les suceda a nuestros niños  puede afectarles en el futuro, es importante saber cómo cuidarlos, cuáles son las enfermedades más comunes que pueden afectarlos y qué hacer para que crezcan sanos y felices. Ingrese aquí.
+					a(href="#")
+						span +
+						| Ver todos los articulos
+				.c-savaTemas__box
+					.icon
+					figure
+						img(src='img/iconos/icon-corazon.svg ')
+					span Corazón
+					p Las enfermedades cardiacas son la principal causa de muerte en todo el mundo. En esta sección encontrará artículos que le ayudarán a conocerlas, prevenirla o a convivir con ellas. Ingrese aquí.
+					a(href="#")
+						span +
+						| Ver todos los articulos
+				.c-savaTemas__box
+					.icon
+					figure
+						img(src='img/iconos/icon-respiratorio.svg ')
+					span Sistema Respiratorio
+					p Un adulto lleva aire a sus pulmones y lo expulsa entre 12 y 20 veces por minuto, de manera automática. Pero las personas que aprenden a respirar de manera consciente pueden mejorar su salud física e incluso mental. Encuentre información relacionada con enfermedades respiratorias y algunos importantes consejos para mejorar la respiración. Ingrese aquí.
+					a(href="#")
+						span +
+						| Ver todos los articulos
+				.c-savaTemas__box
+					.icon
+					figure
+						img(src='img/iconos/icon-nutri.svg')
+					span Nutrición
+					p La nutrición aporta al organismo las sustancias para desarrollarse y sobrevivir. Una nutrición inadecuada puede conducir tanto a un sobrepeso como a un bajo peso, y ambos estados se relacionan con diferentes enfermedades. Opte por una vida sana e infórmese acerca de las ventajas de tener una buena nutrición, Ingrese aquí.
+					a(href="#")
+						span +
+						| Ver todos los articulos
+				.c-savaTemas__box
+					.icon
+					figure
+						img(src='img/iconos/icon-gastrico.svg ')
+					span Sistema Digestivo
+					p Los hábitos de alimentación, el cigarrillo, el alcohol, la genética y otros factores pueden afectar el sistema digestivo. Encuentre información relacionada con enfermedades del estómago, del intestino y conozca algunos consejos prácticos para tratarlas. Ingrese aquí.
+					a(href="#")
+						span +
+						| Ver todos los articulos
+				.c-savaTemas__box
+					.icon
+					figure
+						img(src='img/iconos/icon-dolor.svg ')
+					span Dolor e Inflamación
+					p El dolor y la inflamación surgen como una respuesta natural de nuestro organismo ante una lesión, y aunque muchas veces resultan desagradables e incómodos, suelen ser parte de un proceso de recuperación o de una alerta frente a una enfermedad. Ingrese aquí.
+					a(href="#")
+						span +
+						| Ver todos los articulos
+				.c-savaTemas__box
+					.icon
+					figure
+						img(src='img/iconos/icon-mental.svg ')
+					span Mental
+					p El ritmo de vida acelerado, la competitividad del mundo laboral, dificultades familiares, el tipo de personalidad e incluso factores biológicos pueden ocasionar estrés, insomnio, ansiedad y otros trastornos. Ingresa aquí. 
+					a(href="#")
+						span +
+						| Ver todos los articulos
+				.c-savaTemas__box
+					.icon
+					figure
+						img(src='img/iconos/icon-vision.svg ')
+					span Visión
+					p La vista es uno de los sentidos más importantes ya que a través de ella captamos el 80% de la información del entorno. Sin embargo, nuestros ojos pueden enfermarse y dañarse. Infórmese acerca de las afecciones más comunes de la vista y sepa cómo prevenirlas o tratarlas. Ingrese aquí.
+					a(href="#")
+						span +
+						| Ver todos los articulos
+				.c-savaTemas__box
+					.icon
+					figure
+						img(src='img/iconos/icon-nutricion.svg ')
+					span Otros
+					p La salud y el bienestar dependen en gran medida de lo que cada persona elija como estilo de vida. El conocmiento en esta materia puede hacer la diferencia entre preservar o ver afectada la salud. Para profundizar en este tema ingrese aquí.
+					a(href="#")
+						span +
+						| Ver todos los articulos																						
+	.c-newsletter
+		.c-inner
+			.c-newsletter__info
+				h1 ¡Suscríbase a nuestros Temas de Interés!
+				p Recibirá semanalmente artículos relevantes y recomendaciones para cuidar su salud.
+			.c-newsletter__form
+				form(action="#")
+					.icon
+						i.icon-Correo
+					.input.email
+						input(type="text" placeholder="email@ejemplo.cl")
+					.input.submit
+						input(type="submit" value="Enviar")
+			.clearfix
+	.c-homeBlog
+		.c-inner
+			h1.c-info__h1.u-mb40
+				span Temas destacados
+			.c-homeBlog__articles
+				each item in [1,2,3]
+					.c-homeBlog__article
+						.c-homeBlog__article-inner
+							.c-homeBlog__article-image
+								img(src="img/blog-thumb.png")
+							.c-homeBlog__article-info
+								h2 ¿Qué es la diabetes?
+								span Marzo 16, 2016 por Camila en temas de salud
+								p Voluptatem accusantium dolormque laudantium sa tota rem aperiam, eaque ipsa quae [...]
+								a(href="#")
+									span + 
+									| Leer más
+
+								.c-homeBlog__article-socials
+									a(href="#")
+										span.fas.fa-envelope
+									a(href="#")
+										span.fab.fa-facebook-f
+									a(href="#")
+										span.fab.fa-twitter
+									a(href="#")
+										span.fab.fa-google-plus-g
+									a(href="#")
+										span.fab.fa-linkedin-in
+
+block append scripts
+

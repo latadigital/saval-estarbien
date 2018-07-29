@@ -1,0 +1,250 @@
+@include component('AboutUs') {
+    padding: 116px 0px 116px;
+    position: relative;
+    overflow: hidden;
+    background: #f8f8f8;
+    @media(max-width: 1400px) {
+        padding: 50px 0px 40px;
+    }       
+    
+    @media(max-width: 992px) {
+        padding: 20px 10px;
+    }    
+
+    @include element('info') {
+        height: 1%;
+        overflow: hidden;
+        margin: 0px auto;
+        position: relative;
+        width: 1650px;
+        z-index: 10;
+        @media(max-width: 1650px) {
+            width: 1400px;
+        }
+
+        @media(max-width: 1400px) {
+            padding: 0px 40px;
+            width: 1200px;
+        }     
+        
+        @media(max-width: 1200px) {
+            padding: 0px 0px;
+            width: 992px;
+        }             
+
+        @media(max-width: 992px) {
+            width: 100%;
+        }        
+    }
+
+    @include element('icon') {
+        background: $color_brand;
+        position: absolute;
+        top: 0px;
+        height: 100%;
+        right: 0px;
+        width: 45.3%;
+        z-index: 1;
+        @media(max-width: 992px) {
+            max-height: 190px;
+            width: 100%;
+        }        
+
+        img {
+            position: absolute;
+            top: 0px;
+            height: 100%;
+            max-height: 670px;
+            max-width: 558px;
+            opacity: 0.1;
+            width: 100%;
+            right: -50px;
+        }
+    }
+
+    @include element('image') {
+        background: rgba(255, 255, 255, 0.6);
+        padding: 9px;
+        float: right;
+        width: 54.5%;
+
+        @media(max-width: 1400px) {
+            margin: 95px 0px;
+        } 
+        
+        @media(max-width: 1200px) {
+            margin: 200px 0px;
+        }         
+
+        @media(max-width: 992px) {
+            margin: 0px;
+            width: 100%;
+        }
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }    
+
+    @include element('description') {
+        float: left;
+        width: 45.5%;
+        padding-right: 80px;
+        
+        @media(max-width: 1400px) {
+            margin: 55px 0px;
+        }           
+
+        @media(max-width: 1200px) {
+            margin: 55px 0px;
+        }   
+
+        @media(max-width: 992px) {
+            text-align: left;
+            padding: 0px 30px;
+            margin: 20px 0px;
+            width: 100%;
+        } 
+        
+        @media(max-width: 600px) {
+            padding: 0px 5px;
+        }         
+
+        h1 {
+            margin-bottom: 60px;
+            @media(max-width: 992px) {
+                display: inline-block;
+                margin-bottom: 30px;
+            }               
+
+            span {
+                background: $color_brand2;
+                border-right-color: $color_brand;
+                line-height: 30px;
+                @media(max-width: 992px) {
+                    font-size: 16px !important;
+                    padding: 10px 0px;
+                    line-height: 22px;
+                }                   
+            }
+
+            &:after {
+                background: $color_brand;
+            }
+        } 
+        
+        p {
+            padding-left: 12px;
+        }
+    }     
+}
+
+@include component('aboutGalery') {
+    border-top: 15px solid #0074c8;
+    display: flex;
+    height: 1%;
+    overflow: hidden;
+    @media(max-width: 992px) {
+        display: block;
+    }    
+
+    @include element('item') {
+        width: 100%;
+        @media(max-width: 992px) {
+            display: block;
+            float: left;
+            width: 50%;
+        }
+
+        img {
+            display: block;
+            line-height: 0px;
+            width: 100%;
+        }
+    }
+}
+
+@include component('aboutInfo') {
+    height: 1%;
+    overflow: hidden;
+
+    @include element('box') {
+        float: left;
+        padding: 160px 110px;
+        width: 50%;
+        @media(max-width: 1400px) {
+            padding: 160px 40px;
+        }
+
+        @media(max-width: 992px) {
+            padding: 50px 20px;
+            width: 100%;
+        }
+
+        @include modifier('grey') {
+            background: #f8f8f8;
+        }
+
+        h2 {
+            background: $color_brand2;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 60px;
+            display: inline-block;
+            padding: 0px 65px 0px 20px;
+            color: #fff;
+            border-right: 15px solid $color_brand;
+            margin-bottom: 40px;
+            @media(max-width: 600px) {
+                line-height: 50px;
+                font-size: 18px;
+            }            
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 26px;
+            margin-bottom: 40px;
+
+            strong {
+                font-weight: 700;
+            }
+        }
+
+        ul {
+            height: 1%;
+            overflow: hidden;
+
+            li {
+                padding-left: 35px;
+                color: #888888;
+                font-size: 18px;
+                text-transform: uppercase;
+                float: left;
+                width: 50%;
+                font-weight: 700;
+                position: relative;
+                margin-bottom: 23px;
+                @media(max-width: 1200px) {
+                    font-size: 14px;
+                }
+
+                @media(max-width: 600px) {
+                    width: 100%;
+                }
+
+                &:after {
+                    height: 16px;
+                    width: 16px;
+                    background: $color_brand2;
+                    position: absolute;
+                    left: 0px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    content: '';
+                }
+            }
+        }
+    }
+}

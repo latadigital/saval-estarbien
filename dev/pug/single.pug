@@ -1,0 +1,57 @@
+extends layouts/default.pug
+
+block vars
+    - pageTitle = 'Titulo de noticia'
+
+block content
+    .c-single
+        .c-inner
+            .c-single__content
+                .c-single__image
+                    img(src="img/single-image.png" alt="Alt de la imagen")
+                h1 Sed elit quam iaculis sed semper sit amet sollicitudin vita.
+
+                p Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magniol res eos qui rate voluptatem sequi nesciunt  Neque porro quisquam est qui dolorem ipsum quia dolore sit amet con sectetur adipisci quia suthagara lukuthea satham non numquam eius modi tempra. incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+                p Enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magniol res eos qui rate voluptatem sequi nesciunt  Neque porro quisquam est qui dolorem ipsum quia dolore sit amet con sectetur adipisci quia suthagara lukuthea sathamnon numquam eius modi tempra. incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam quia dolore sit amet con sectetur adip. quia suthagara lukuthea sathamnon
+                blockquote “ Completely synergize resource taxing relationships via premier niche markets. Profess tionally cultivate one-to-one customer service with robust ideas” 
+                p Enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magniol res eos qui rate voluptatem sequi nesciunt  Neque porro quisquam est qui dolorem ipsum quia dolore sit amet con sectetur adipisci quia suthagara lukuthea sathamnon numquam eius modi tempra. incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam quia dolore sit amet con sectetur adip. quia suthagara lukuthea sathamnon
+                .c-single__share
+                    .icon
+                        span.fas.fa-share-alt
+                    p Comparte:
+                    a(href="#") Facebook
+                    a(href="#") Twitter
+                    a(href="#") Behance
+
+                    .c-single__pagination
+                        a(href="#")
+                            span.fas.fa-arrow-left
+                            i Prev
+                        | /
+                        a(href="#")
+                            i Next 
+                            span.fas.fa-arrow-right
+            .c-single__aside
+                .c-single__search
+                    form(action="#")
+                        .input.search
+                            input(type="text" placeholder="Buscar")
+                h2 Categorias 
+                .c-single__cats
+                    each item in ['Visión', 'Dolor e inflamación', 'Mental', 'Infantil', 'Corazión']
+                        .c-single__cat
+                            a(href="#") #{item}
+                            .count (15)
+                h2 Posts recientes
+                .c-single__recents
+                    each item in [1,2,3,4]
+                        .c-single__recent
+                            figure
+                            .info
+                                h3 Dental patients increased to protection
+                                p May 16, 2016 by 
+                                    a(href="#") Parker 
+                                    | in
+                                    a(href="#") lab
+
+block append scripts

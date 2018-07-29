@@ -1,0 +1,99 @@
+extends layouts/default.pug
+
+block vars
+    - var pageTitle = 'Programa de descuentos'
+
+block content
+    .c-breadcrumb
+        .c-inner
+            ul
+                li
+                    a(href="#") Home /
+                li
+                    a(href="#") Planes de descuentos
+    .c-planesAbout
+        .c-planesAbout__icon
+            img(src="img/home-about-icon.svg")
+        .c-planesAbout__info
+            .c-planesAbout__image
+                img(src="img/planes-descuentos-info.png")
+            .c-planesAbout__description
+                h1.c-info__h1.u-mb30.c-info__h1--font20
+                    span Programa de descuento en medicamentos SAVAL
+                p.c-info__parrafo Este programa tiene como objetivo favorecer el acceso a medicamentos de alta calidad a través de descuentos que faciliten el cumplimiento de la terapia que el médico ha indicado. Dichos descuentos en dinero se hacen efectivos al momento de realizar la compra de uno o más de los medicamentos incluidos en este programa.
+    .c-beneficios
+        .c-inner
+            .c-beneficios__title
+                h2 ¿Por qué 
+                    strong inscribirse 
+                    | en el programa 
+                    strong BienEstar SAVAL?
+                p Porque a través de estos descuentos tendrás acceso a medicamentos de alta calidad y tecnología,  certificados según normas internacionales.
+            .c-beneficios__lista
+                ul
+                    li Los medicamentos incluidos en el programa son en su mayoría para el tratamiento de las enfermedades más frecuentes.
+                    li Los medicamentos SAVAL son fabricados con alta tecnología farmacéutica y certificados según normas internacionales.
+                    li El programa BienEstar SAVAL incluye también fármacos para las enfermedades crónicas y agudas más prevalentes.
+                    li Más de 90 medicamentos de Laboratorios SAVAL con importantes descuentos para cumplir con la terapia indicada por el médico.
+    .c-comoAcceder
+        .c-inner
+            h1 ¿Cómo 
+                strong Acceder al Programa?
+
+            .c-comoAcceder__items
+                .c-comoAcceder__item
+                    .icon
+                        img(src="img/planes-icon-1.png")
+                    p Verifique si el o los medicamentos recetados tienen descuento, para esto, utilice el buscador seleccionando marca y/o presentación.
+                .c-comoAcceder__item
+                    .icon
+                        img(src="img/planes-icon-2.png")
+                    p Si su medicamento tiene descuento usted puede imprimir, guardar, o enviar a través de SMS (desde móviles) el cupón de descuento correspondiente.
+                .c-comoAcceder__item
+                    .icon
+                        img(src="img/planes-icon-3.png")
+                    p Una vez que tenga en su poder el cupón junto a la receta médica, puede dirigirse a cualquier farmacia adherida al programa, inscribirse y quedar habilitado para obtener el descuento en forma inmediata.
+    .c-buscadorMedicamentos
+        h1 Buscador de descuento en medicamentos
+
+        .c-buscadorMedicamentos__form
+            form(action="#")
+                .select.brand
+                    label(for="#") Seleccione marca
+                    select(name="")
+                        option(value="#") Marca
+                .select.brand
+                    label(for="#") Seleccione presentación
+                    select(name="")
+                        option(value="#") Marca
+                .input.submit
+                    button Buscar
+    .c-buscadorResultados
+        .c-inner
+            h1 Resultados
+            .c-buscadorResultados__items
+                each item in [1,2,3,4]
+                    .c-buscadorResultados__item
+                        p Cefirax ® Cefpodoxima - 10 Comprimidos recubiertos
+                        .actions
+                            span $-3.000
+                            a(href="#") Generar cupón
+            .c-buscadorResultados__text
+                p Recuerde que el cupón de descuento es válido sólo al momento de inscribirse en las farmacias adheridas. Imprimir sólo un cupón para los medicamentos contenidos en una receta.
+                a(href="#") descargar lista completa de medicamentos con descuento
+    .c-asociados
+        .c-inner
+            h1 Farmacias adheridas al programa 
+                strong BienEstar SAVAL
+            .c-asociados__logos
+                .c-asociados__logo
+                    img(src="img/brands-salcobrand.png")
+                .c-asociados__logo
+                    img(src="img/brands-ahumada.png")
+                .c-asociados__logo
+                    img(src="img/brands-cruzverde.png")
+                .c-asociados__logo
+                    img(src="img/brands-carmen.png")
+                .c-asociados__logo
+                    img(src="img/brands-redfarma.png")                                                                                
+block append scripts
