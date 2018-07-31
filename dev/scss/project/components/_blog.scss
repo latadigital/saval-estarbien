@@ -297,6 +297,511 @@
     }
 }
 
+@include component('modalCupon') {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    @media(max-width: 992px) {
+         display: none !important;
+         width: 100%;
+    }
+
+    @include element('overlay') {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 99995;
+    }
+
+    @include element('wrapper') {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99999;
+        width: 100%;
+        max-width: 900px;
+    }
+
+    @include element('info') {
+        background: $color_brand2;
+        height: 1%;
+        overflow: hidden;
+        padding: 0px 107px 0px 50px;
+        width: 100%;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    @include element('text') {
+        float: left;
+        padding: 40px 100px 30px 0px;
+        width: 70%;
+
+        span {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 35px;
+            margin-bottom: 20px;
+            font-family: 'Hind', sans-serif;
+            font-weight: 300;
+            line-height: 36px;
+            position: relative;
+            color: #fff;
+
+            strong {
+                font-size: 42px;
+                color: #0074c8;
+                font-style: italic;
+                font-weight: 700;
+                position: relative;
+                z-index: 10;
+            }
+
+            &:after {
+                background: url('../img/Monito.png');
+                content: '';
+                height: 107px;
+                position: absolute;
+                top: -30px;
+                left: 200px;
+                width: 69px;
+                z-index: 1;
+            }
+        }
+
+        > p {
+            color: #fff;
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 40px;
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-weight: 400;
+        }
+    }
+
+    @include element('valido') {
+        text-align: left;
+        margin-bottom: 10px;
+        position: relative;
+
+        p {
+            background: #fff;
+            display: inline-block;
+            border-bottom-left-radius: 20px;            
+            color: #0065c2;
+            line-height: 40px;
+            font-size: 14px;
+            font-family: 'Open Sans Condensed', sans-serif;
+            padding-left: 20px;
+            padding-right: 10px;
+            font-weight: 700;
+        }
+
+        &:after {
+            background: url('../img/popup-saval-logo.png');
+            content: '';
+            height: 79px;
+            width: 79px;
+            position: absolute;
+            right: 0px;
+            top: -36px;
+        }
+    }
+
+    @include element('input-agree') {
+        color: #fff;
+        text-align: center;
+        font-weight: 700;
+
+        input {
+            margin-right: 10px;
+        }        
+    }
+
+    @include element('codigos') {
+        background: #fff;
+        position: absolute;
+        height: 100%;
+        right: 100px;
+        text-align: center;
+        color: #fff;
+        width: 25%;
+    }
+
+    @include element('center') {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0px 25px;
+        width: 100%;
+    }
+
+    @include element('item') {
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    @include element('buttons') {
+        background: $color_brand2;
+        text-align: center;
+        padding: 20px 0px;
+
+        a {
+            display: inline-block;
+            background: #0074c8;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 10px 30px;
+            font-size: 12px;
+            margin-right: 7px;
+            transition: all 250ms;
+            &:last-child {
+                margin-right: 0px;
+            }
+
+            &:hover {
+                background: #0074c8 - 50;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@include component('modalMobile') {
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    z-index: 995;
+    display: none;
+    @media(max-width: 992px) {
+        display: none;
+    }
+
+    @include element('overlay') {
+        background: #0074C5;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: 998;
+    }
+
+    @include element('wrapper') {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+        padding: 20px 0px 20px;
+        width: 95%;
+    }
+
+    @include element('firstStep') {
+        border-radius: 20px;
+        padding: 20px 0px 20px;
+        background: #fff;
+        display: none;
+        @include modifier('active') {
+            display: block;
+        }
+
+        span {
+            padding: 0px 30px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 35px;
+            margin-bottom: 20px;
+            font-family: 'Hind', sans-serif;
+            font-weight: 300;
+            line-height: 36px;
+            padding-left: 30px;
+            position: relative;
+            color: #000;
+
+            strong {
+                font-size: 42px;
+                color: #0074c8;
+                font-style: italic;
+                font-weight: 700;
+                position: relative;
+                z-index: 10;
+            }
+
+            &:after {
+                background: url('../img/Monito.png');
+                content: '';
+                height: 107px;
+                position: absolute;
+                top: -30px;
+                left: 220px;
+                width: 69px;
+                z-index: 1;
+            }
+        }
+    }
+
+    @include element('text') {
+        background: $color_brand2;
+        padding: 20px;
+        margin-bottom: 20px;
+
+        p {
+            color: #fff;
+            line-height: 18px;
+        }
+    }
+
+    @include element('valido') {
+        text-align: center;
+
+        p {
+            background: $color_brand;
+            display: inline-block;
+            border-bottom-left-radius: 20px;            
+            color: #fff;
+            line-height: 40px;
+            font-size: 14px;
+            font-family: 'Open Sans Condensed', sans-serif;
+            padding-left: 20px;
+            padding-right: 10px;
+            font-weight: 700;            
+        }
+    }
+
+    @include element('input-agree') {
+        text-align: center;
+        margin-bottom: 15px;
+
+        input {
+            margin-right: 10px;
+        }
+    }
+
+    @include element('btn') {
+        background: $color_brand2;
+        color: #fff;
+        padding: 5px 10px;
+        display: block;
+        max-width: 130px;
+        margin: 0px auto;
+        text-align: center;
+        &:hover {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+
+    @include element('secondStep') {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        overflow: hidden;
+        max-width: 450px;
+        display: none;
+
+        @include modifier('active') {
+            display: block;
+        }
+    }
+
+    @include element('item') {
+        background: #fff;
+        height: 1%;
+        overflow: hidden;
+        padding: 20px 20px;
+        margin-bottom: 10px;
+        position: relative;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    @include element('image') {
+        float: left;
+        padding: 0px 10px;
+        width: 60%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    @include element('info') {
+        float: left;
+        width: 40%;
+        text-align: center;
+        padding-top: 20px;
+
+        h2 {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 300;
+        }
+    }
+
+    @include element('codigo') {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        background: $color_brand;
+        padding: 15px 5px 10px 20px;
+        border-top-left-radius: 10px;
+
+        span {
+            font-size: 22px;
+            color: #fff;
+            
+            a {
+                color: #fff;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    @include element('btnMobile') {
+        background: $color_brand2;
+        padding: 20px 10px;
+        text-align: center;
+
+        a {
+            color: #fff;
+            background: $color_brand;
+            text-transform: uppercase;
+            padding: 5px 10px;
+        }
+    }
+}
+
+@include component('mapa') {
+    position: relative;
+
+    @include element('search') {
+        position: absolute;
+        background: #fff;
+        left: 15%;
+        bottom: -20px;
+        padding: 60px 60px 10px;
+        z-index: 20;
+        max-width: 480px;
+        @media(max-width: 800px) {
+            position: initial;
+            width: 100%;
+            bottom: 0px;
+            max-width: initial;
+        }
+
+        h1 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+    }
+
+    @include element('searchBox') {
+        width: 100%;
+
+        form {
+            .input {
+                input {
+                    height: 40px;
+                    border: 1px solid #eeeeee;
+                    width: 100%;
+                    padding: 0px 10px;
+                    margin-bottom: 10px;
+                    outline: none;
+                }
+
+                &.submit {
+                    text-align: right;
+
+                    input {
+                        background: $color_brand2;
+                        color: #fff;
+                        border: none;
+                        transition: all 250ms;
+                        cursor: pointer;
+                        max-width: 100px;
+                        &:hover {
+                           background: $color_brand2 - 50; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include element('item') {
+        padding-left: 25px;
+        margin-bottom: 30px;
+        position: relative;
+
+        p {
+            margin-bottom: 0px;
+            font-size: 12px;
+            margin-bottom: 5px;
+
+            strong {
+                font-weight: 700;
+                font-size: 15px;
+            }
+        }
+
+        a {
+            margin-top: 20px;
+            display: block;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        &:after {
+            background: url('../img/location-icon.png');
+            content: '';
+            height: 18px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 13px;
+        }
+    }
+}
+
 .grid-sizer {
     width: 25%;
+}
+
+#map {
+    height: 680px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 10;
 }

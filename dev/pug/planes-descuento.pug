@@ -77,7 +77,7 @@ block content
                         p Cefirax ® Cefpodoxima - 10 Comprimidos recubiertos
                         .actions
                             span $-3.000
-                            a(href="#") Generar cupón
+                            a.buscadorResultados__button(href="#") Generar cupón
             .c-buscadorResultados__text
                 p Recuerde que el cupón de descuento es válido sólo al momento de inscribirse en las farmacias adheridas. Imprimir sólo un cupón para los medicamentos contenidos en una receta.
                 a(href="#") descargar lista completa de medicamentos con descuento
@@ -95,5 +95,109 @@ block content
                 .c-asociados__logo
                     img(src="img/brands-carmen.png")
                 .c-asociados__logo
-                    img(src="img/brands-redfarma.png")                                                                                
+                    img(src="img/brands-redfarma.png")
+    .c-mapa
+        #map
+        .c-mapa__search
+            h1 ¿No sabe donde está la farmacia más cercana?
+            p ¡No se preocupe, nosotros le ayudamos!
+            
+            .c-mapa__searchBox
+                form(action="")
+                    .input.address
+                        input(type="text" placeholder="Ingrese su dirección")
+                    .input.submit
+                        input(type="submit" value="Buscar")
+            each item in [1,2,3]
+                .c-mapa__item
+                    p
+                        strong Farmacia Ahumada
+                    p Av. los leones 1160
+                    p Abierto hasta 00:00
+
+                    a(href="#") ¿Cómo llegar?
+
+    .c-modalCupon(style="display:none;")
+        .c-modalCupon__overlay
+        .c-modalCupon__wrapper
+            .c-modalCupon__info
+                .c-modalCupon__text
+                    span
+                        img(src="img/nuevo.png")    
+                    h1 Programa de 
+                        br
+                        strong Descuento 
+                        br
+                        | en medicamentos
+                    p Descuento válido del 01 de marzo de 2018 al 31 de diciembre de 2018, ambas fechas inclusive. Consulte por la disponibilidad de los productos en Farmacias Ahumada, Farmacias Salco Brand, Farmacias Cruz Verde,  y en todas las farmacias adheridas a este programa. 
+                        br
+                        | No acumulables a otras promociones, ofertas y/o convenios. NO SE AUTOMEDIQUE. Todo medicamento debe ser prescrito por su médico. Consulte siempre el uso de medicamentos con su médico o químico farmacéutico. Dispensación de medicamentos se realizará conforme condición de venta según normativa vigente.
+                    .c-modalCupon__valido
+                        p Programa válido del: 01/03/2018 al 31/12/2018
+                    .c-modalCupon__input-agree
+                        input(type="checkbox")
+                        | He leído y aceptado los términos
+                .c-modalCupon__codigos
+                    .c-modalCupon__center
+                        .c-modalCupon__item
+                            img(src="img/barra-1.png")
+                        .c-modalCupon__item
+                            img(src="img/barra-2.png")
+                        .c-modalCupon__item
+                            img(src="img/barra-3.png")
+            .c-modalCupon__buttons
+                a(href="#")
+                    span
+                    | Guardar
+                a(href="#")
+                    span 
+                    | Imprimir
+                a(href="#") Enviar por correo
+                a(href="#") Enviar por mensaje de texto
+    .c-modalMobile
+        .c-modalMobile__overlay
+        .c-modalMobile__wrapper
+            .c-modalMobile__firstStep.c-modalMobile__firstStep--active
+                span
+                    img(src="img/nuevo.png")    
+                h1 Programa de 
+                    br
+                    strong Descuento 
+                    br
+                    | en medicamentos
+                .c-modalMobile__text
+                    p Descuento válido del 01 de marzo de 2018 al 31 de diciembre de 2018, ambas fechas inclusive. Consulte por la disponibilidad de los productos en Farmacias Ahumada, Farmacias Salco Brand, Farmacias Cruz Verde,  y en todas las farmacias adheridas a este programa. No acumulables a otras promociones, ofertas y/o convenios. NO SE AUTOMEDIQUE. Todo medicamento debe ser prescrito por su médico. Consulte siempre el uso de medicamentos con su médico o quími
+                .c-modalMobile__valido
+                    p Programa válido del: 01/03/2018 al 31/12/2018
+                .c-modalMobile__input-agree
+                    input(type="checkbox")
+                    | He leído y aceptado los términos
+                a.c-modalMobile__btn(href="#") Obtener cupón
+            .c-modalMobile__secondStep
+                .c-modalMobile__item
+                    .c-modalMobile__image
+                        img(src="img/barra-1.png")
+                    .c-modalMobile__info
+                        h2 Escanee el código de barra o digítelo
+                    .c-modalMobile__codigo
+                        span 1231231231
+                .c-modalMobile__item
+                    .c-modalMobile__image
+                        img(src="img/barra-2.png")
+                    .c-modalMobile__info
+                        h2 Escanee el código de barra o digítelo
+                    .c-modalMobile__codigo
+                        span 1231231231
+                .c-modalMobile__item
+                    .c-modalMobile__image
+                        img(src="img/barra-3.png")
+                    .c-modalMobile__info
+                        h2 Escanee el código de barra o digítelo
+                    .c-modalMobile__codigo
+                        span 1231231231      
+                .c-modalMobile__btnMobile
+                    a.c-modalMobile__btn-imprimir(href="#") Imprimir cupón
+                
 block append scripts
+
+    script(src="js/map.js")
