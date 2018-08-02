@@ -11,11 +11,6 @@ $(document).ready(function(e) {
 		e.preventDefault();
 	});	
 
-	$('.c-blog__articles').masonry({
-		itemSelector: '.c-blog__article',
-		columnWidth: '.grid-sizer'
-	});
-
 	$('.c-modalCupon__overlay').click(function(e){
 		$('.c-modalCupon').hide();
 
@@ -26,7 +21,7 @@ $(document).ready(function(e) {
 		$('.c-modalCupon').show();
 
 		e.preventDefault();
-	});	
+	});		
 
 	if(win < 992) {
 		$('.c-modalMobile__btn').click(function (e) {
@@ -50,4 +45,11 @@ $(document).ready(function(e) {
 			e.preventDefault();
 		});
 	}
+});
+
+$(window).on('load', function () {
+	$('.c-blog__articles').masonry({
+		itemSelector: '.c-blog__article',
+		columnWidth: '.grid-sizer'
+	});	
 });

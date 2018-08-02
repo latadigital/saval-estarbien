@@ -44,6 +44,30 @@
                 margin-bottom: 10px;
             }
         }
+
+        ul {
+            padding-left: 50px;
+            margin-bottom: 10px;
+
+            li {
+                padding-left: 20px;
+                margin-bottom: 5px;
+                color: #777777;
+                line-height: 28px;
+                font-size: 14px;  
+                position: relative;
+                &:after {
+                    background: #f19800;
+                    content: '';
+                    height: 8px;
+                    position: absolute;
+                    left: 0px;
+                    top: 9px;
+                    border-radius: 50%;
+                    width: 8px;
+                }
+            }
+        }
     }
 
     @include element('share') {

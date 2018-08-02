@@ -55,6 +55,8 @@
         font-size: 14px;
         color: #000;
         line-height: 24px;
+        font-size: 15px;
+        font-weight: 400;
         margin-bottom: 30px;
         font-family: 'Raleway', sans-serif;
     }
@@ -72,6 +74,8 @@
         cursor: pointer;
         font-weight: 700;
         width: auto;
+        position: relative;
+        z-index: 90;
 
         span {
             margin-right: 9px;
@@ -234,13 +238,27 @@
                 height: 60px;
                 width: 60px; 
                 content: '';
-                top: 70px;
+                top: 90px;
                 right: -30px;
                 background: url('../img/home-savalinfo-icon.png');
                 background-size:60px 60px;
                 z-index: 999;
             }
         }
+
+        &:nth-of-type(2) {
+            &:before {
+                position: absolute;
+                height: 60px;
+                width: 60px; 
+                content: '';
+                top: 90px;
+                right: -30px;
+                background: url('../img/home-savalinfo-icon.png');
+                background-size:60px 60px;
+                z-index: 999;
+            }
+        }        
 
 
         h2 {
@@ -250,7 +268,7 @@
             border-left: 15px solid #6db9da;
             padding-left: 15px;
             margin-bottom: 20px;
-            font-weight: 300;
+            font-weight: 400;
             @media(max-width: 1200px) {
                 font-size: 25px;
                 line-height: 34px;
@@ -263,7 +281,7 @@
 
         h3 {
             font-size: 28px;
-            font-weight: 300;
+            font-weight: 400;
             color: #fff;
             line-height: 40px;
             margin-bottom: 18px !important;
@@ -302,13 +320,8 @@
                     display: inline-block;
                     font-family: 'Raleway', sans-serif;
                     vertical-align: middle;
+                    font-size: 15px;
                     width: 75.7%;
-                }
-
-                &:nth-of-type(even) {
-                    span {
-                        opacity: 0.4;
-                    }
                 }
 
                 &:last-child {
@@ -323,7 +336,10 @@
             color: #fff;
             padding-left: 30px;
             font-family: 'Raleway', sans-serif;
+            font-size: 15px;
             margin-bottom: 28px;
+            position: relative;
+            z-index: 10;
         }
 
         .gallery {
@@ -439,7 +455,8 @@
         top: -10px;
         line-height: 22px;
         font-family: 'Raleway', sans-serif;
-        max-width: 620px;
+        max-width: 640px;
+        font-size: 15px;
         margin: 0px auto 60px;
         @media(max-width: 992px) {
             margin: 0px auto 50px;
@@ -524,7 +541,7 @@
             font-family: 'Raleway', sans-serif;
             margin-bottom: 30px;
             font-size: 13px;
-            font-weight: 300;
+            font-weight: 400;
             @media(max-width: 600px) {
                 max-height: 0px;
                 overflow: hidden;
@@ -620,7 +637,7 @@
         padding: 28px 20px 30px;
 
         h2 {
-            font-size: 18px;
+            font-size: 20px;
             color: #1896f1;
             font-weight: 700;
             margin-bottom: 8px;
@@ -636,7 +653,7 @@
         p {
             font-size: 13px;
             color: #888888;
-            font-weight: 300;
+            font-weight: 400;
             margin-bottom: 30px;
             line-height: 24px;
         }
@@ -678,7 +695,7 @@
             border-radius: 50%;
             width: 30px;
             line-height: 32px;
-            background: #333333;
+            background: #fe9802;
 
             span {
                 display: inline-block;
