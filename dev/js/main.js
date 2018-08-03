@@ -48,7 +48,7 @@ $(document).ready(function(e) {
 	}
 
 
-	$('.owl-carousel').owlCarousel({
+	$('#slider').owlCarousel({
 		loop: true,
 		margin: 0,
 		dots: false,
@@ -56,6 +56,26 @@ $(document).ready(function(e) {
 		responsiveClass: true,
 		items: 1
 	});
+
+	$('#quienes-somos').owlCarousel({
+		loop: true,
+		margin: 0,
+		nav: true,
+		autoplay: true,
+		autoplayTimeout: 5000,
+		autoplayHoverPause: false,
+		responsive: {
+			0: {
+				items: 1
+			},
+			600: {
+				items: 3
+			},
+			1000: {
+				items: 5
+			}
+		}
+	})	
 });
 
 $(window).on('load', function () {

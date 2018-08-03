@@ -5,7 +5,7 @@ block vars
 
 block content
 	.c-bigbanner
-		.c-bigbanner__slides.owl-carousel 
+		#owl-carousel.c-bigbanner__slides.owl-carousel 
 			.c-bigbanner__slide
 				.c-bigbanner__image
 					img(src="img/home-bigbanner.jpg", alt="")
@@ -91,11 +91,25 @@ block content
 					| Farmacéutica
 					br
 					small Galeria de fotos
-				.gallery
-					each item in [1,2,3,4,5,6]
-						figure
-							a(href="#")
-								img(src="img/gallery-item.jpg")
+				#links.gallery
+					figure
+						a(href="img/home-galeria-4.png" data-fancybox="gallery")
+							img(src="img/home-galeria-1.png")
+					figure
+						a(href="img/home-galeria-4.png" data-fancybox="gallery")
+							img(src="img/home-galeria-2.png")
+					figure
+						a(href="img/home-galeria-4.png" data-fancybox="gallery")
+							img(src="img/home-galeria-3.png")
+					figure
+						a(href="img/home-galeria-4.png" data-fancybox="gallery")
+							img(src="img/home-galeria-4.png")
+					figure
+						a(href="img/home-galeria-4.png" data-fancybox="gallery")
+							img(src="img/home-galeria-5.png")
+					figure
+						a(href="img/home-galeria-4.png" data-fancybox="gallery")
+							img(src="img/home-galeria-6.png")
 	.c-savaTemas
 		.c-inner
 			h1.c-info__h1.c-info__h1--inline-block.u-mb30
