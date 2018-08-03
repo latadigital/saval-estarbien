@@ -50,23 +50,11 @@ $(document).ready(function(e) {
 
 	$('.owl-carousel').owlCarousel({
 		loop: true,
-		margin:0,
+		margin: 0,
 		dots: false,
 		nav: false,
 		responsiveClass: true,
-		responsive:{
-			0:{
-				items:1 ,
-				nav:true
-			},
-			600:{
-				items: 1,
-			},
-			1000:{
-				items:1,
-				loop:true
-			}
-		}
+		items: 1
 	});
 });
 
