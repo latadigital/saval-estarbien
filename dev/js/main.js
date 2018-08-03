@@ -1,6 +1,7 @@
 $(document).ready(function(e) {
 	var win = $(window).width();
 
+	
 	$('.c-header__mobile-open').click(function(e){
 		$('.c-header__navOpen').addClass('c-header__navOpen--open');
 		e.preventDefault();
@@ -45,6 +46,28 @@ $(document).ready(function(e) {
 			e.preventDefault();
 		});
 	}
+
+
+	$('.owl-carousel').owlCarousel({
+		loop: true,
+		margin:0,
+		dots: false,
+		nav: false,
+		responsiveClass: true,
+		responsive:{
+			0:{
+				items:1 ,
+				nav:true
+			},
+			600:{
+				items: 1,
+			},
+			1000:{
+				items:1,
+				loop:true
+			}
+		}
+	});
 });
 
 $(window).on('load', function () {

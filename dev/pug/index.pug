@@ -5,7 +5,7 @@ block vars
 
 block content
 	.c-bigbanner
-		.c-bigbanner__slides
+		.c-bigbanner__slides.owl-carousel 
 			.c-bigbanner__slide
 				.c-bigbanner__image
 					img(src="img/home-bigbanner.jpg", alt="")
@@ -18,6 +18,34 @@ block content
 					span  
 						i en 
 						| medicamentos
+			.c-bigbanner__slide
+				.c-bigbanner__image
+					img(src="img/home-bigbanner.jpg", alt="")
+				.c-bigbanner__info
+					hgroup
+						h2
+							span Nuevo 
+							| programa de
+						h1 Descuentos					
+					span  
+						i en 
+						| medicamentos
+			.c-bigbanner__slide
+				.c-bigbanner__image
+					img(src="img/home-bigbanner.jpg", alt="")
+				.c-bigbanner__info
+					hgroup
+						h2
+							span Nuevo 
+							| programa de
+						h1 Descuentos					
+					span  
+						i en 
+						| medicamentos
+				
+						
+
+
 	.c-homeAbout
 		.c-homeAbout__icon
 			img(src="img/home-about-icon.svg")
@@ -66,7 +94,8 @@ block content
 				.gallery
 					each item in [1,2,3,4,5,6]
 						figure
-							img(src="img/gallery-item.jpg")
+							a(href="#")
+								img(src="img/gallery-item.jpg")
 	.c-savaTemas
 		.c-inner
 			h1.c-info__h1.c-info__h1--inline-block.u-mb30

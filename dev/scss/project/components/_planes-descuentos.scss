@@ -189,8 +189,8 @@
                     font-weight: 700;
                 }
 
-                &:after {
-                    content: '>';
+                i {
+                    content: '';
                     height: 24px;
                     background: $color_brand2;
                     width: 24px;
@@ -199,7 +199,7 @@
                     top: 0px;
                     color: #fff;
                     text-align: center;
-                    line-height: 20px;
+                    line-height: 24px;
                     font-size: 14px;
                 }
             }
@@ -407,7 +407,7 @@
     }
 
     @include element('items') {
-        max-height: 250px;
+        max-height: 300px;
         overflow-y: scroll;
     }
 

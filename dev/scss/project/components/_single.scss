@@ -19,12 +19,52 @@
         }        
 
         h1 {
-            font-size: 20px;
-            color: #000;
-            line-height:30px;
+            font-size: 25px;
+            color: #0074c8;
+            line-height: 30px;
             margin-bottom: 10px;
+            position: relative;
+            padding-left: 30px;
+
+            &::before{
+                content: '';
+                height: 20px;
+                background: $color_brand2;
+                width: 20px;
+                position: absolute;
+                left: 0px;
+                top: 6px;
+                color: #fff;
+                text-align: center;
+                line-height: 24px;
+                font-size: 14px;
+            }
         }
 
+        h2 {
+            font-size: 20px;
+            color: #000;
+            line-height: 30px;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 15px;
+            border-bottom: 1px solid $color_brand;
+            padding-bottom: 10px;
+
+            &::before{
+                content: '';
+                height: 20px;
+                background: $color_brand2;
+                width: 10px;
+                position: absolute;
+                left: 0px;
+                top: 6px;
+                color: #fff;
+                text-align: center;
+                line-height: 24px;
+                font-size: 14px;
+            }
+        }
         p {
             color: #777777;
             line-height: 28px;
@@ -33,7 +73,7 @@
 
         blockquote {
             background: #fafafa;
-            border-left: 3px solid #f19800;
+            border-left: 3px solid $color_brand;
             padding: 30px 50px;
             color: #777777;
             font-size: 15px;
@@ -45,6 +85,7 @@
             }
         }
 
+        
         ul {
             padding-left: 50px;
             margin-bottom: 10px;
@@ -67,6 +108,16 @@
                     width: 8px;
                 }
             }
+        }
+
+        .post-info{
+            background: $color_brand;
+            color: #fff;
+            padding: 5px 10px;
+            text-transform: uppercase;
+            display: block;
+            width: 260px;
+            margin-bottom: 15px;
         }
     }
 
@@ -462,7 +513,7 @@
             position: relative;
 
             &:after {
-                background: url('../img/single-aside-icon.png');
+                background: url('../img/single-aside-icon-2.png');
                 content: '';
                 position: absolute;
                 left: 0px;
