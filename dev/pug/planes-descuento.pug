@@ -79,10 +79,13 @@ block content
     .c-buscadorResultados
         .c-inner
             h1 Resultados
+                span Buscador de descuentos en medicamentos
             .c-buscadorResultados__items
                 each item in [1,2,3,4]
                     .c-buscadorResultados__item
-                        p strong Cefirax ® Cefpodoxima - 10 Comprimidos recubiertos
+                        p 
+                            strong Cefirax 
+                            | ® Cefpodoxima - 10 Comprimidos recubiertos
                         .actions
                             span $-3.000
                             a.buscadorResultados__button(href="#") Generar cupón
@@ -109,22 +112,26 @@ block content
         .c-mapa__search
             h1 ¿No sabe donde está la farmacia más cercana?
             p ¡No se preocupe, nosotros le ayudamos!
-            
-            .c-mapa__searchBox
-                form(action="")
-                    .input.address
-                        input(type="text" placeholder="Ingrese su dirección")
-                    .input.submit
-                        input(type="submit" value="Buscar")
-            each item in [1,2,3]
                 .c-mapa__item
-                    p
+                    a(href="https://www.google.com/maps/search/farmacias+salcobrand/@-33.424048,-70.6244739,15z/data=!3m1!4b1", target="_blank")
+                        i.fas.fa-map-marker-alt
+                        strong Farmacias Salcobrand
+                .c-mapa__item
+                    a(href="https://www.google.com/maps/search/farmacias+ahumada/@-33.4240474,-70.6244739,15z/data=!3m1!4b1", target="_blank")
+                        i.fas.fa-map-marker-alt
                         strong Farmacia Ahumada
-                    p Av. los leones 1160
-                    p Abierto hasta 00:00
-
-                    a(href="#") ¿Cómo llegar?
-
+                .c-mapa__item
+                    a(href="https://www.google.com/maps/search/farmacias+cruz+verde/@-33.4240468,-70.6244739,15z/data=!3m1!4b1", target="_blank")
+                        i.fas.fa-map-marker-alt
+                        strong Farmacia Cruz Verde
+                .c-mapa__item
+                    a(href="https://www.google.com/maps/search/farmacias+carmen/@-33.4240462,-70.6244739,15z/data=!3m1!4b1", target="_blank")
+                        i.fas.fa-map-marker-alt
+                        strong Farmacia Carmen
+                .c-mapa__item
+                    a(href="https://www.google.com/maps/place/Red+Farma/@-33.442526,-70.6700345,17z/data=!3m1!4b1!4m5!3m4!1s0x9662c5acbd6e39bb:0xa3eacbb03a1c69f9!8m2!3d-33.442526!4d-70.6678458", target="_blank")
+                        i.fas.fa-map-marker-alt
+                        strong Redfarma
     .c-modalCupon(style="display:none;")
         .c-modalCupon__overlay
         .c-modalCupon__wrapper

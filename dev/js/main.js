@@ -1,7 +1,19 @@
 $(document).ready(function(e) {
+	
+	
+	$('.c-savaTemas__boxes').on('click', '.c-savaTemas__box', function(){
+		var t = $(this);
+		var tp = t.find('p');
+		var p = t.siblings().find('p');
+		tp.slideToggle();
+		p.slideUp();
+	});
+
+
+
 	var win = $(window).width();
 
-	
+
 	$('.c-header__mobile-open').click(function(e){
 		$('.c-header__navOpen').addClass('c-header__navOpen--open');
 		e.preventDefault();
@@ -51,9 +63,12 @@ $(document).ready(function(e) {
 	$('#slider').owlCarousel({
 		loop: true,
 		margin: 0,
-		dots: false,
+		dots: true,
 		nav: false,
 		responsiveClass: true,
+		autoplay: true,
+		autoplayTimeout: 5000,
+		smartSpeed: 350,
 		items: 1
 	});
 

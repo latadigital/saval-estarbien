@@ -155,7 +155,7 @@
         @media(max-width: 992px) {
             display: block;
             float: left;
-            width: 50%;
+            width: 100%;
         }
 
         img {
@@ -168,6 +168,7 @@
             }
         }
     }
+    
     .owl-dots {
         display: none;
     }
@@ -227,7 +228,7 @@
 
     @include element('box') {
         float: left;
-        padding: 160px 110px;
+        padding: 160px 95px;
         width: 50%;
         @media(max-width: 1400px) {
             padding: 160px 40px;

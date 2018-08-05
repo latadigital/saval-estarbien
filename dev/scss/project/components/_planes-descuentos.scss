@@ -404,11 +404,27 @@
         font-size: 40px;
         font-weight: 700px;
         margin-bottom: 50px;
+
+        span{
+            display: block;
+            font-weight: 400;
+            font-size: 30px;
+        }
     }
 
     @include element('items') {
         max-height: 300px;
         overflow-y: scroll;
+        border: 1px solid #f2f2f2;
+        padding: 20px;
+
+        @media (max-width: 990px){
+            max-height: 350px;
+        }
+
+        @media (max-width: 768px){
+            max-height: 420px;
+        }
     }
 
     @include element('item') {
@@ -454,7 +470,11 @@
             
             @media(max-width: 600px) {
                 padding: 20px 20px;
-            }            
+            }  
+            
+            strong{
+                text-transform: uppercase;
+            }
         }
 
         .actions {
@@ -532,7 +552,8 @@
             font-weight: 700;
             line-height: 24px;
             transition: all 250ms;
-            width: 330px;
+            width: 100%;
+            max-width: 350px;
             &:hover {
                 text-decoration: none;
                 background: #0074c8 - 50;
@@ -574,4 +595,125 @@
             display: inline-block;
         }
     }    
+}
+
+
+
+
+
+
+@include component('mapa') {
+    position: relative;
+    margin-bottom: 50px;
+
+    @include element('search') {
+        position: absolute;
+        background: #fff;
+        left: 15%;
+        bottom: -25px;
+        padding: 60px;
+        z-index: 20;
+        max-width: 480px;
+        -webkit-box-shadow: 0px 9px 15px -6px rgba(150,150,150,0.73);
+        -moz-box-shadow: 0px 9px 15px -6px rgba(150,150,150,0.73);
+        box-shadow: 0px 9px 15px -6px rgba(150,150,150,0.73);
+        @media(max-width: 800px) {
+            position: initial;
+            width: 100%;
+            bottom: 0px;
+            max-width: initial;
+        }
+
+        h1 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+    }
+
+    @include element('searchBox') {
+        width: 100%;
+
+        form {
+            .input {
+                input {
+                    height: 40px;
+                    border: 1px solid #eeeeee;
+                    width: 100%;
+                    padding: 0px 10px;
+                    margin-bottom: 10px;
+                    outline: none;
+                }
+
+                &.submit {
+                    text-align: right;
+
+                    input {
+                        background: $color_brand2;
+                        color: #fff;
+                        border: none;
+                        transition: all 250ms;
+                        cursor: pointer;
+                        max-width: 100px;
+                        &:hover {
+                           background: $color_brand2 - 50; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include element('item') {
+        margin-bottom: 30px;
+        position: relative;
+
+        a {
+            margin-top: 20px;
+            display: block;
+            font-weight: 700;
+            text-decoration: none;
+            height: 40px;
+            line-height: 40px;
+
+            &:after{
+                content: ">";
+                width: 40px;
+                height: 40px;
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                color: #fff;
+                text-align: center;
+                line-height: 40px;
+                background: $color_brand2;
+            }
+
+            i{
+                margin-right: 10px;
+                color: $color_brand;
+            }
+
+            &:hover{
+                background: #f2f2f2;
+            }
+        }
+    }
+}
+
+.grid-sizer {
+    width: 25%;
+}
+
+#map {
+    height: 680px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 10;
 }
